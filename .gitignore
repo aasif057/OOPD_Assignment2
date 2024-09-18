@@ -1,0 +1,8 @@
+# Ignore Object Files
+*.o
+# Ignore temporary files just for safety
+*.log
+*.tmp
+*.swp
+
+.vscode
