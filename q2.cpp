@@ -282,6 +282,5 @@ int main() {
     } else {
         cout << nameToSearch << " not found in any department!" << endl;
     }
-    delete administrativeOfficer;
     return 0;
 }
