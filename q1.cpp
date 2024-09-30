@@ -226,8 +226,9 @@ int main() {
     storePurchaseDepartment.displayMembers();
     cout << "Library" << endl;
     libraryDepartment.displayMembers();
-    int l = 0;
-    while(l==0){
+    
+
+    // Search A Staff
     char nameToSearch[100];
     cout << "Enter the name of the staff member to search: ";
     cin.getline(nameToSearch, 100);

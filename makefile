@@ -6,8 +6,8 @@ SRC = q1.cpp   # Add other source files as needed
 OBJ = $(SRC:.cpp=.o)
 
 # Binary names
-DEBUG_BIN = admin_system_debug
-OPT_BIN = admin_system_opt
+DEBUG_BIN = q1_debug
+OPT_BIN = q1_opt
 
 # Compiler flags
 CXXFLAGS_DEBUG = -g -Wall
