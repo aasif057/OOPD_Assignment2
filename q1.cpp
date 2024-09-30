@@ -75,6 +75,19 @@ public:
     AdministrativeDepartment() 
         : registrar(nullptr), dean(nullptr), associateDean(nullptr), officerCount(0), juniorOfficerCount(0) {}
 
+    ~AdministrativeDepartment() {
+        delete registrar; // Delete registrar
+        delete dean; // Delete dean
+        delete associateDean; // Delete associate dean
+        for (int i = 0; i < officerCount; i++) {
+            delete officers[i]; // Delete administrative officers
+        }
+        for (int i = 0; i < juniorOfficerCount; i++) {
+            delete juniorOfficers[i]; // Delete junior administrative officers
+        }
+    }
+
+
     void setRegistrar(Registrar* reg) {
         registrar = reg;
     }
@@ -226,8 +239,9 @@ int main() {
     storePurchaseDepartment.displayMembers();
     cout << "Library" << endl;
     libraryDepartment.displayMembers();
-    int l = 0;
-    while(l==0){
+    
+
+    // Search A Staff
     char nameToSearch[100];
     cout << "Enter the name of the staff member to search: ";
     cin.getline(nameToSearch, 100);
@@ -251,7 +265,5 @@ int main() {
     else {
         cout << nameToSearch << "' not found in any department!" << endl;
     }
-
-    delete registrar;
     return 0;
 }
