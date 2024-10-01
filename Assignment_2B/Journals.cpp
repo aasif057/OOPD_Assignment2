@@ -1,5 +1,9 @@
-#include<iostream>
+#include "Journals.h"       // Include the header for Journals
+#include <iostream>
+
 using namespace std;
+
+// ... (rest of your Journals.cpp code)
 
 class Journals : public LibraryItem
 {
@@ -26,4 +30,3 @@ public:
         cout << "ID: " << ID << "\nJournal Title: " << title << "\n";
     }
 };
-

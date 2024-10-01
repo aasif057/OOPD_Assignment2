@@ -9,12 +9,19 @@
 #include <chrono>
 #include <thread>
 #include <iomanip>
+#include <iostream>
+#include "User.h"             // Include the header for User
+#include "Book.h"             // Include the header for Book
+#include "PublicationRank.h"   // Include the header for PublicationRank
+#include "Journals.h"         // Include the header for Journals
+#include "Library.h"
+#include "functions.h"
 using namespace std;
 
 int main()
 {
     Library library;
-    // int ID = 1;
+    int ID = 1;
 
     // Opening journal.csv
     ifstream journalFile("journals.csv");
@@ -22,7 +29,7 @@ int main()
     {
         string line;
         // Read and discard the header line
-        // getline(journalFile, line);
+        getline(journalFile, line);
 
         while (getline(journalFile, line))
         {

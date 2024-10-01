@@ -1,3 +1,9 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cctype> 
+using namespace std;
+
 bool isNumeric(const string &str)
 {
     for (char c : str)
@@ -83,4 +89,3 @@ bool isValidUserName(const string &userName)
 
     return field;
 }
-

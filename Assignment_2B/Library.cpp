@@ -1,3 +1,12 @@
+#include <iostream>
+#include "Library.h"         // Include the header for Library
+#include "Book.h"           // Include the header for Book
+#include "User.h"           // Include the header for User
+#include "PublicationRank.h" // Include the header for PublicationRank
+#include "Journals.h"       // Include the header for Journals
+
+using namespace std;
+
 class Library
 {       
 private:    
@@ -5,7 +14,7 @@ private:
     int itemCount;
     int nextBookId;
     int totalCopies;
-            
+    int ID;
     User students[100]; // Assuming a maximum of 100 students
     int studentCount = 0;
     
@@ -189,4 +198,3 @@ return nullptr; // Book with the specified Isbn not found
 
     virtual ~Library() {} // Virtual destructor
 };
-

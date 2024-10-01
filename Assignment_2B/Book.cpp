@@ -1,3 +1,7 @@
+#include "Book.h"           // Include the header for Book
+#include <iostream>
+
+using namespace std;
 class Book : public LibraryItem
 {
 private:
@@ -89,4 +93,3 @@ public:
              << original_publication_year << "\n";
     }
 };
-

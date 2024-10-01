@@ -9,7 +9,7 @@
 #include <chrono>
 #include <thread>
 #include <iomanip>
-
+#include "LibraryItem.h" 
 using namespace std;
 int ID = 1;
 const int MAX_ITEMS = 500; // Maximum number of items in the library
@@ -19,6 +19,5 @@ public:
     virtual void printDetails() const = 0;
     virtual ~LibraryItem() {}
 };
-
 
 

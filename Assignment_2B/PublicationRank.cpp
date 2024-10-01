@@ -1,5 +1,11 @@
-#include<iostream>
+#include <iostream>
+#include "PublicationRank.h" // Include the header for PublicationRank
+#include "LibraryItem.h"     // Include the header for LibraryItem
+
 using namespace std;
+
+// ... (rest of your PublicationRank.cpp code)
+
 
 class PublicationRank : public LibraryItem
 {

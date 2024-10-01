@@ -1,3 +1,13 @@
+#include "User.h"           // Include the header for User
+#include "Book.h"          // Include the header for Book
+#include "PublicationRank.h" // Include the header for PublicationRank
+#include "Journals.h"      // Include the header for Journals
+#include <string>
+#include <iostream>
+using namespace std;
+// ... (rest of your User.cpp code)
+
+
 class User
 {
 private:
@@ -79,7 +89,7 @@ public:
     {
         for (int i = 0; i < MAX_BORROWED_BOOKS; ++i)
         {
-   {
+   
             if (borrowedBooks[i] == book)
             {
                 borrowedDates[i] = borrowTime;
@@ -110,4 +120,3 @@ public:
         }
     }
 };
-
