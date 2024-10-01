@@ -1,12 +1,12 @@
-#include <iostream>
-#include "Library.h"         // Include the header for Library
-#include "Book.h"           // Include the header for Book
-#include "User.h"           // Include the header for User
-#include "PublicationRank.h" // Include the header for PublicationRank
-#include "Journals.h"       // Include the header for Journals
-
+#ifndef LIBRARY_H
+#define LIBRARY_H
+#include<iostream>
+#include<cstddef>
+#include<string>
+#include "LibraryItem.cpp"
+#include "User.cpp"
+#include "Book.cpp"
 using namespace std;
-
 class Library
 {       
 private:    
@@ -14,7 +14,7 @@ private:
     int itemCount;
     int nextBookId;
     int totalCopies;
-    int ID;
+            
     User students[100]; // Assuming a maximum of 100 students
     int studentCount = 0;
     
@@ -150,7 +150,7 @@ return nullptr; // Book with the specified Isbn not found
 
         return true;
     }
-    bool isEqualIgnore(const std::string &str1, const std::string &str2) {
+    bool isEqualIgnore(const string &str1, const string &str2) {
     // Check if the lengths of the strings are equal
     if (str1.length() != str2.length()) {
         return false;
@@ -198,3 +198,4 @@ return nullptr; // Book with the specified Isbn not found
 
     virtual ~Library() {} // Virtual destructor
 };
+#endif

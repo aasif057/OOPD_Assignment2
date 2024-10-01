@@ -9,19 +9,15 @@
 #include <chrono>
 #include <thread>
 #include <iomanip>
-#include <iostream>
-#include "User.h"             // Include the header for User
-#include "Book.h"             // Include the header for Book
-#include "PublicationRank.h"   // Include the header for PublicationRank
-#include "Journals.h"         // Include the header for Journals
-#include "Library.h"
-#include "functions.h"
+#include "classFunctions.cpp"
+#include "functions.cpp"
+    
 using namespace std;
 
 int main()
 {
     Library library;
-    int ID = 1;
+    extern int ID;
 
     // Opening journal.csv
     ifstream journalFile("journals.csv");
@@ -29,7 +25,7 @@ int main()
     {
         string line;
         // Read and discard the header line
-        getline(journalFile, line);
+        // getline(journalFile, line);
 
         while (getline(journalFile, line))
         {
@@ -86,7 +82,7 @@ int main()
             ss.ignore(256, ',');
             if (line.find("\"") != string::npos)
             {
-                ss >> quoted(authors);
+                // ss >> quoted(authors);
             }
             else
             {
@@ -100,7 +96,7 @@ int main()
             //getline(ss, title, ',');
             if (fields[9].find("\"") != string::npos)
             {
-                ss >> quoted(title);
+                // ss >> quoted(title);
             }
             else
             {

@@ -1,15 +1,10 @@
-#include <iostream>
+#ifndef CLASSFUNCTIONS_H
+#define CLASSFUNCTIONS_H
+#include<iostream>
+#include "Library.cpp"
 #include <string>
-#include <ctime>
-#include <thread>
-#include <chrono>
-#include "Library.h"          // Include the header for Library class
-#include "User.h"             // Include the header for User class
-#include "Book.h"             // Include the header for Book class
-#include "PublicationRank.h"   // Include the header for PublicationRank class
-#include "Journals.h"         // Include the header for Journals class
-
 using namespace std;
+
 void Library ::searchBooksByAuthor(const string &bookAuthor, Book *matchingBooks[], int &matchingCount)
 {
     matchingCount = 0;
@@ -450,3 +445,4 @@ bool Library::borrowJournal(const string &userName, int title)
     //     return false;
     // }
 }
+#endif

@@ -1,9 +1,10 @@
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <cctype> 
-using namespace std;
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+#include <string>        
+#include <sstream>           
+#include <iostream>      
 
+using namespace std; 
 bool isNumeric(const string &str)
 {
     for (char c : str)
@@ -89,3 +90,5 @@ bool isValidUserName(const string &userName)
 
     return field;
 }
+
+#endif
